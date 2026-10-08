@@ -1,28 +1,16 @@
-# Care Without Barriers — website
+# Care Without Barriers — privacy policy
 
-Static landing page and privacy policy for the Care Without Barriers app. No build step:
-plain HTML + one stylesheet. Colours mirror `MpColors` in the app.
+Privacy policy for the Care Without Barriers app (Google Play and App Store), published by
+[Care Without Barriers](https://www.carewithoutbarriers.ca/). Plain HTML, no build step.
 
 ```
-index.html     landing page
-privacy.html   privacy policy (draft — see below)
-styles.css     shared styles, light + dark
-assets/        icon and app screenshots (from marketing/store/screenshots/raw-ios in the app repo)
+index.html     the privacy policy
+styles.css     styles, light + dark (colours from the app's MpColors)
+assets/        icon
 ```
 
-Preview locally:
+Deploy by serving this folder as-is on any static host or under a sub-path (all links are
+relative), then put that URL in Play Console (App content → Privacy policy), App Store
+Connect (App Information → Privacy Policy URL) and the app's Privacy screen.
 
-```bash
-python3 -m http.server 8080
-```
-
-Deploy: any static host (GitHub Pages, Vercel, Netlify) serving this folder's root.
-
-## Before publishing the privacy policy
-
-- Fill every highlighted `[PLACEHOLDER]` in `privacy.html` (operator, address, privacy
-  contact, effective date, Vercel log retention).
-- Confirm OpenAI zero data retention and the DPA (`docs/provider-retention.md` in the app repo).
-- Complete the Quebec Law 25 transfer assessment.
-- Counsel review (PIPEDA + provincial acts).
-- Link the policy URL from the app (`privacy_policy_note`) and both store listings.
+When the app's data handling changes, update the policy and its effective date in the same release.
